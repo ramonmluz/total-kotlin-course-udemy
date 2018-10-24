@@ -11,6 +11,8 @@
 # IntelliJ
 out/
 
+.idea/
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -23,7 +25,7 @@ out/
 *.zip
 *.tar.gz
 *.rar
-*.idea
+
 
 # Gradle files
 .gradle/

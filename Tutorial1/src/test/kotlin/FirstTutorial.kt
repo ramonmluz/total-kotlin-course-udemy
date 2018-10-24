@@ -2,7 +2,6 @@ fun main(args: Array<String>) {
 
 //     Var  = Mutável - Pode mudar
 //     Val  = Imutavel - Não pode mudar
-
 //     solveOperationSimples()
 //     readStringFromConsole()
 //     workIntegerAndDecimal()
@@ -14,7 +13,35 @@ fun main(args: Array<String>) {
 //     createListArrayList()
 //     useWhile()
 //     getFunctionsReturn()
+//     testConstructors()
+//     learnDataClass()
+       learnCallback()
+}
 
+private fun learnCallback() {
+    speakName(object : ExampleCallback {
+        override fun speakName(name: String) {
+            println("my name $name")
+        }
+    })
+}
+
+private fun speakName(callback: ExampleCallback) {
+    callback.speakName("Liz")
+    callback.speakName("Liz Alves")
+    callback.speakName("Liz Porto")
+}
+
+
+private fun learnDataClass() {
+    var person: PersonDataClass = PersonDataClass("Goku", 72, 31)
+
+    println("Name " + person.name)
+    println("Age " + person.age)
+    println("Weight " + person.weight)
+}
+
+private fun testConstructors() {
     val toyota = Car()
     toyota.carName = "Ford"
     println("toyotaName: " + toyota.carName)
@@ -22,10 +49,6 @@ fun main(args: Array<String>) {
 
     val ford = Car("Ford")
     println("Ford Name: ${ford.carName}")
-//    toyota.doStuff()
-//    val tractor = Tractor()
-//    tractor.makeNoise()
-//    tractor.roamAroundCrops()
 }
 
 /**
